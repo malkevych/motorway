@@ -3,8 +3,10 @@ In this work was implemented parallel loading pages. It can be specified how man
 
 Pls. have fun! :P
 
-# Algorithm
- ![Algorithm demonstration](repo_images/algorithm.png?style=centerme)  
+## Algorithm
+<p align="center">
+  <img width="571" height="293" src="repo_images/algorithm.png">
+</p> 
 
  All requests (responses) are linked to each other with a doubly-linked list.  
  Rules:
@@ -21,6 +23,6 @@ Pls. have fun! :P
 - `npm run test` to run unit tests
 - `npm run integration` to run integration tests
 
-# Troubleshootings
-## 'mocha' command not found
+## Troubleshootings
+### 'mocha' command not found
 - if you are on mac you have to use sudo npm install -g mocha
