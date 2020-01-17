@@ -31,7 +31,7 @@ describe.only('Motorway data provider', () => {
             assert.hasAllKeys(res, ['data', 'total']);
         });
 
-        it('should return all with visits', async () => {
+        it('should the result should be array of Visit models', async () => {
             const {
                 notToday,
                 onlyBusinessDays,
@@ -43,6 +43,10 @@ describe.only('Motorway data provider', () => {
                 .fetch();
 
             assert.isArray(visits);
+
+            if (visits.length) {
+                assert.hasAllKeys(visits[0], ['id', 'name', 'date']);
+            }
         });
     });
 });
