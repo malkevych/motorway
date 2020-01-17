@@ -1,9 +1,9 @@
-const dataProvider = require('../../../dataProvider');
+const dataProvider = require('../../dataProvider');
 const {
     visits: {
         connect: connectVisitsRepository,
     },
-} = require('../../../repositories');
+} = require('../../repositories');
 const {
     dataLoader,
     filterStrategies,
