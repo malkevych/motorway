@@ -1,0 +1,39 @@
+{
+  "name": "motorway",
+  "version": "1.0.0",
+  "description": "This is an implementation of motorway test task",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha -r chai/register-assert spec src/**/__tests__/**/*.spec.js",
+    "integration": "mocha -r chai/register-assert --require=dotenv/config spec src/**/__integration__/**/*.spec.js",
+    "postinstall": "link-module-alias"
+  },
+  "keywords": [
+    "morotway"
+  ],
+  "author": "Malkevych Bohdan",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.4"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "axios": "^0.19.1",
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "link-module-alias": "^1.2.0",
+    "mocha": "^7.0.0"
+  },
+  "_moduleAliases": {
+    "~root": "./src",
+    "~utils": "./src/utils",
+    "~config": "./src/config",
+    "~helpers": "./src/helpers"
+  }
+}
