@@ -4,8 +4,9 @@ In this work was implemented parallel loading pages. It can be specified how man
 Pls. have fun! :P
 
 # Algorithm
- ![Algorithm demonstration](repo_images/algorithm.png)
- All requests (responses) are linked to each other with a doubly-linked list.
+ ![Algorithm demonstration](repo_images/algorithm.png?style=centerme)  
+
+ All requests (responses) are linked to each other with a doubly-linked list.  
  Rules:
  - If the response of page N has the same total as response N + 1 => they are full, so we do nothing.
  - If the response of page N has an intersection with N + 1 (means some items were inserted before) they are full, so we do nothing.
