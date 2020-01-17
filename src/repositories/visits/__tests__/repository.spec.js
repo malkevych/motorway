@@ -127,7 +127,7 @@ describe('Repository', () => {
         });
     });
 
-    describe('Only bussiness days', () => {
+    describe('Not today', () => {
         const mockedOnlyTodayVisitors = [
             { id: 1, name: 'Bill Murray', date: new Date().toISOString() }, // Sunday
             { id: 2, name: 'John Doe', date: new Date().toISOString() }, // Saturday

@@ -58,7 +58,7 @@ const accessTokenWrap = (fn, provider) => {
 const connect = (...args) => {
     const instance = new MotorwayProvider(...args);
     return {
-        authorize: () => instance.gainAccessToken.call(instance, null),
+        authorize: () => instance.gainAccessToken(),
         loadVisitors: accessTokenWrap(instance.loadVisitors, instance),
     };
 };
