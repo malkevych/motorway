@@ -4,11 +4,13 @@ const axiosNetworkProvider = require('~utils/axiosNetworkProvider');
 class MotorwayProvider {
     constructor({
         baseURL,
+        retries,
     } = {}) {
         if (!baseURL) throw Error('baseURL was not specified');
 
         this.provider = axiosNetworkProvider({
             baseURL,
+            retries,
         });
         this.accessToken = null;
     }

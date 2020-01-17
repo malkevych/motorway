@@ -11,6 +11,9 @@ const {
     groupVisits,
 } = require('./helpers');
 
+const providerOptions = {
+    retries: 3,
+};
 const options = {
     maxParallelRequests: 5,
     maxElementsPerPage: 15,
@@ -23,7 +26,7 @@ const {
 
 
 const main = async () => {
-    const provider = dataProvider('motorway');
+    const provider = dataProvider('motorway', providerOptions);
     const loader = dataLoader(provider, options);
     const repository = visitsRepository(loader);
 

@@ -1,10 +1,14 @@
 const axios = require('axios');
+const axiosRetry = require('axios-retry');
 
 
 module.exports = function axiosNetworkProvider(params) {
     const {
         baseURL,
+        retries = 3,
     } = params;
+    axiosRetry(axios, { retries });
+
     const instance = axios.create({
         baseURL,
         timeout: 1000,
@@ -12,16 +16,6 @@ module.exports = function axiosNetworkProvider(params) {
             'Content-Type': 'application/json',
         },
     });
-
-    /**
-     * TODO: Retry if error 
-     */
-    // this.$axios.interceptors.response.use(null, (error) => {
-    //     if (error.config && error.response && error.response.status === 401) {
-    //        
-    //     }
-    //     return Promise.reject(error);
-    //   });
 
     return instance;
 };
